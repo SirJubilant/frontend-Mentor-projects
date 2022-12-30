@@ -1,0 +1,17 @@
+$breakpoints: (
+    "desktop-up": 960px,
+);
+
+@mixin desktop-up {
+    @media(min-width: map-get($breakpoints, "desktop-up")) {
+        @content;
+    }
+}
+
+
+@mixin breakpoint ($bp : 600px) {
+    @media(max-width: $bp) {
+        @content;
+    }
+}
+
